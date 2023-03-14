@@ -1,4 +1,4 @@
-package com.myCompany.managmentSystem;
+package com.myCompany.formGUI;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
