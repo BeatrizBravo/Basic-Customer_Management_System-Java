@@ -26,13 +26,15 @@ public class   Form extends JFrame {
         Submit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String name = textName.getText();
+                String address = textAdress.getText();
 
 
-
+                JOptionPane.showMessageDialog(null,name);
+                JOptionPane.showMessageDialog(null,address);
             }
         });
     }
-
 
 
 
