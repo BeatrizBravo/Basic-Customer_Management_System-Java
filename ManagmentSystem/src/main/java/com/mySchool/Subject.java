@@ -42,4 +42,12 @@ public class Subject {
         }else return "Fail";
     }
 
+
+    @Override
+    public String toString() {
+        return "\nSubjects:" +
+                "\n\t Subject='" + nameSubject +
+                "\n\t Score obtain in the subject=" + scoreSubject +
+                "\n\t Promote =" + getPassSubject();
+    }
 }

@@ -1,6 +1,8 @@
 package com.mySchool;
 
 import java.util.ArrayList;
+import java.text.NumberFormat;
+import java.util.Formatter;
 
 public class Student {
     private String NameStudent;
@@ -35,12 +37,19 @@ public class Student {
     public double getAverageScore(){
             /*After we create the ArrayList with the type Suject we can use its atribute to do operations*/
 
-        double sumOfAllScore = 0;
-        for(Subject i :ListOfSubjectFromStudent.){  // le pasamos el tipo de subject con la variable i
-            sumOfAllScore += i.getScoreSubject();
 
-            return sumOfAllScore/ListOfSubjectFromStudent.size();
+        //formateando numero que dara promedio medio
+        NumberFormat formatenadoNumero= NumberFormat.getInstance();
+        formatenadoNumero.setMaximumFractionDigits(2);
+
+        double sumOfAllScore = 0;
+        for(Subject i :ListOfSubjectFromStudent){  // le pasamos el tipo de subject con la variable i
+            sumOfAllScore += i.getScoreSubject();
+            sumOfAllScore/= ListOfSubjectFromStudent.size();
+
         }
+        //el formateo deveolvia un string y lo hemos convertido a double
+        return Double.parseDouble(formatenadoNumero.format(sumOfAllScore));
 
     }
 
@@ -49,11 +58,26 @@ public class Student {
     public void addSubjectToCurriculum(Subject nameSubject){
         /*Método para agregar una Asignatura a su plan de estudio;
         verificar que la asignatura no exista previamente las asignaturas de ese Alumno.*/
+
+
         if (ListOfSubjectFromStudent.contains(nameSubject)) {
             System.out.println("That subject already exist");
         }else{
             ListOfSubjectFromStudent.add(nameSubject);
         }
 
+    }
+
+    //Todos las Clases tienen el metodo toString para que podamos imprimir todos los atributos de los objetos
+    @Override
+    public String toString() {
+
+
+        return "\n\nStudent::" +
+
+                "\nName =" + NameStudent +
+                "\nag e=" + ageStudent +
+                "\nList of Subject enroll =" + ListOfSubjectFromStudent +
+                "\nAverage Score" + getAverageScore();
     }
 }
