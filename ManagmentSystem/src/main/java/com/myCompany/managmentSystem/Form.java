@@ -29,9 +29,9 @@ public class   Form extends JFrame {
                 String name = textName.getText();
                 String address = textAdress.getText();
 
+                String fullNameSalutation = "Hello my visitor, Your name is " + name+ " and you live in "+ address;
 
-                JOptionPane.showMessageDialog(null,name);
-                JOptionPane.showMessageDialog(null,address);
+                JOptionPane.showMessageDialog(null,fullNameSalutation);
             }
         });
     }
