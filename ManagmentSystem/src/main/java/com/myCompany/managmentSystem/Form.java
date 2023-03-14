@@ -14,8 +14,12 @@ import java.awt.event.ActionListener;
 public class   Form extends JFrame {
     public JPanel Main;
     public JTextField textName;
-    public JTextField textAdress;
     public JButton Submit;
+    private JTextField textEmail;
+    private JTextField textPhoneNumber;
+    private JLabel email;
+    private JLabel phoneNumber;
+    private JTextField txtLastName;
     /*
     * select the package where to create the form
     * New->swing UI Designer-> GUI Form, creamos y custozamos creando la clase Form
@@ -27,11 +31,13 @@ public class   Form extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String name = textName.getText();
-                String address = textAdress.getText();
+                String lastName = txtLastName.getText();
+                String email = textEmail.getText();
+                String phone = textPhoneNumber.getText();
 
-                String fullNameSalutation = "Hello my visitor, Your name is " + name+ " and you live in "+ address;
+                String saving = "you have saved correctly";
 
-                JOptionPane.showMessageDialog(null,fullNameSalutation);
+                JOptionPane.showMessageDialog(null,saving);
             }
         });
     }
