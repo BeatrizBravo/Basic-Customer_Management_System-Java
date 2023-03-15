@@ -4,12 +4,12 @@ public abstract class Vehicle {
 
     private String make;
     private String model;
-    private String patente;
+    private String numberPlate;
 
-    public Vehicle(String make, String model, String patente) {
+    public Vehicle(String make, String model, String numberPlate) {
         this.make = make;
         this.model = model;
-        this.patente = patente;
+        this.numberPlate = numberPlate;
     }
 
     public void speed() {
@@ -41,6 +41,11 @@ public abstract class Vehicle {
 
     @Override
     public String toString() {
-        return "Vehiculo{" + "make=" + make + ", model=" + model + ", patente=" + patente + '}';
+        return "\nVehiculo:" +
+                "\n\tmake=" + make +
+                "\n\tmodel=" + model +
+                "\n\tnumberPlate=" + numberPlate;
     }
+
+
 }
