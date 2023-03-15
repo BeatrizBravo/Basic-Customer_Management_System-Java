@@ -39,12 +39,14 @@ public abstract class Vehicle {
         System.out.println("Encendiendo...");
     }
 
+
     @Override
     public String toString() {
         return "\nVehiculo:" +
                 "\n\tmake=" + make +
                 "\n\tmodel=" + model +
                 "\n\tnumberPlate=" + numberPlate;
+
     }
 
 

@@ -2,10 +2,10 @@ package com.carDealership;
 
 import java.util.ArrayList;
 
-public class carDealershipDataBase {
+public class CarDealershipDataBase {
     private ArrayList<Vehicle> listOfVehiclevehicles;
 
-    public carDealershipDataBase() {
+    public CarDealershipDataBase() {
         this.listOfVehiclevehicles = new ArrayList<>();
     }
 
